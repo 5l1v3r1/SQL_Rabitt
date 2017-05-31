@@ -125,53 +125,36 @@ def Animation(String):
         time.sleep(0.1)
         sys.stdout.write("\r" + "[" + animation[i % len(animation)] + "]" + BitColors.verde + String)
         sys.stdout.flush()
-    print('')
 
 class Banner():
-    Rabitt_society = """
-cddddddddddddddddddddddddddddddddddddddddddd;
-0Mo..........':ldkO0KKXXKK0kxoc,..........kMd
-0Ml......;d0WMMMMMMMMMMMMMMMMMMMWKx:......kMd
-0Ml...cOWMMMMMMMMMMMMMMMMMMMMMMMMMMMWO:...kMd  
-0Ml.lNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNc.kMd
-0MdKMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM0OMd
-0MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd
-0MxcxWMMMMMNXXNMMMMMMMMMMMMMMMNXXNMMMMMWkcKMd
-0Md..lMKo,.,'...:kWMMMMMMMNx;...',.;dXMl.'XMd
-0Mx'.,O;dXMMMXl....:dWMNo;....oXMMMKd;0,.'KMd
-0MO;.,NMWMMMMMMWk;...XMK...:OWMMMMMMWMN,.cNMd      
-0MxxNMX;KMMKdcclkWN0WMMMN0WNxc:lxXMMk;WMXdKMd  ███████╗ ██████╗ ██╗         ██████╗  █████╗ ██████╗ ██╗████████╗████████╗
-0MMMMMO;MMl.......KMXOMNkMk.......xMM.NMMMMMd  ██╔════╝██╔═══██╗██║         ██╔══██╗██╔══██╗██╔══██╗██║╚══██╔══╝╚══██╔══╝       
-0MMMMMMXKoclddl;.oWMdkMN,MN:.:ldolcdXNMMMMMMd  ███████╗██║   ██║██║         ██████╔╝███████║██████╔╝██║   ██║      ██║   
-0MMMMMMWXMMMMMMMW0KdoNMMdox0MMMMMMMMXMMMMMMMd  ╚════██║██║▄▄ ██║██║         ██╔══██╗██╔══██║██╔══██╗██║   ██║      ██║   
-0MMMMXc'WMMMMMMMMkcWMMMMMMkcMMMMMMMMN'lXMMMMd  ███████║╚██████╔╝███████╗    ██║  ██║██║  ██║██████╔╝██║   ██║      ██║  
-0MMMd..cMMMMMMMMNdoKMMMMM0x:XMMMMMMMM:..kMMMd  ╚══════╝ ╚══▀▀═╝ ╚══════╝    ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝   ╚═╝      ╚═╝   
-0MM0....d0KKOd:.....c0Kx'.....:d0NX0l....NMMd
-0MMO.....................................WMMd         +=========================================+
-0Mdkc...................................0kOMd         |          łαbørαŧøriø Fαηŧαsмα           |
-0Ml.:Ol;........';;.......;,........':oX:.kMd         +=========================================+
-0Ml..,WMMMMWWWo...';;:c::;'...:WWMMMMMW;..kMd         |       ♚ Coded: łuŧЋ1єr ルシアー           |
-0Ml...dMMMMMMMMKl...........c0MMMMMMMMd...kMd         |   ♚ Chennel: @Phatasm_Lab (Telegram)    |
-0Ml...cMMMMMMMMMMMXOxdddk0NMMMMMMMMMMM'...kMd         |      ♚ Date: 31/05/2017                 |
-0Ml....KMMMMMMMMMMMMMMMMMMMMMMMMMMMMMO....kMd         | ♚ Youtube: https://goo.gl/f4EPw1        |
-0Ml.....OMMMMMMMMMMMMMMMMMMMMMMMMMMMK.....kMd         | ♚ I take no responsibilities for the    |
-0Ml......:XMMMMMMMMMMMMMMMMMMMMMMMNl......kMd         |        use of this program !            |
-0Ml........lXMMMMMMMMMMMMMMMMMMMKc........kMd         +=========================================+
-0Ml..........:KMMMMMMMMMMMMMMM0,..........kMd         |          łαbørαŧøriø Fαηŧαsмα           |
-oO:............xOOOx:'';dOOOOd............lOc         +=========================================+"""
-print(BitColors.magenta+Banner.Rabitt_society)
-fastprint(BitColors.amarelo+'\t\t                                             Telegram:'+BitColors.ciano+' @DreadPirateRobert')
+    Computer = """
+  _   _   _     _   _   _   _   _   _  
+ / \ / \ / \   / \ / \ / \ / \ / \ / \ 
+( S | Q | L ) ( R | a | b | i | t | t )
+ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/ """
+print(BitColors.magenta+Banner.Computer)
+print('+======================================+')
+print('|        Laboratorio Fantasma          |')
+print('+======================================+')
+print('$$        Coded By > Luth1er          $$')
+print('$$         Date: 31/05/2017           $$')
+print('$$ I take no responsibilities for the $$')
+print('$$      use of this program !         $$')
+print('+======================================+')
+print('|         SQLi_Scanner_Finder          |')
+print('+======================================+')
+fastprint(BitColors.magenta+"\t\t               Telegram: @DreadPirateRobertt")
 print('')
-paginas = int(input(BitColors.branco+'[+] Numero De Paginas: '))*10
+paginas = int(input(BitColors.magenta+'[+] Numero De Paginas: '))*10
 class SQL_Vulns():
     SqlVulns_List = ["mysql_num_rows()","mysql_fetch_array()","Error Occurred While Processing Request","Server Error in '/' Application","Microsoft OLE DB Provider for ODBC Drivers error","error in your SQL syntax","Invalid Querystring",
     "OLE DB Provider for ODBC","VBScript Runtime","ADODB.Field","BOF or EOF","ADODB.Command","JET Database","mysql_fetch_row()",
     "Syntax error","include()","mysql_fetch_assoc()","mysql_fetch_object()","mysql_numrows()","GetArray()","FetchRow()",
-    "Input string was not in a correct format","","","","","","",
+    "Input string was not in a correct format","session_start()","array_merge()","preg_match()","ilesize()","filesize()","",
     "SQL Error","[MySQL][ODBC 5.1 Driver][mysqld-4.1.22-community-nt-log]You have an error in your SQL syntax","You have an error in your SQL syntax","mysql_query()","mysql_fetch_object()","Query failed:","Warning include() [function.include]",
     "mysql_num_rows()","Database Query Failed","mysql_fetch_assoc()","mysql_free_result()","Query failed (SELECT * FROM WHERE id = )","num_rows","Error Executing Database Query",
     "Unclosed quotation mark","Error Occured While Processing Request","FetchRows()","Microsoft JET Database","ODBC Microsoft Access Driver","OLE DB Provider for SQL Server","SQLServer JDBC Driver",
-    "Error Executing Database Query","ORA-01756"]
+    "Error Executing Database Query","ORA-01756","getimagesize()",]
     E_MICROSOFT=["Microsoft JET Database", "ADODB.Recordset", "500 - Internal server error", "Microsoft OLE DB Provider", "Unclosed quotes", "ADODB.Command", "ADODB.Field error", "Microsoft VBScript","Microsoft OLE DB Provider for SQL Server", "Unclosed quotation mark", "Microsoft OLE DB Provider for Oracle", "Active Server Pages error", "OLE/DB provider returned message","OLE DB Provider for ODBC", "Unclosed quotation mark after the character string", "SQL Server", "Warning: odbc_"]
     E_ORACLE=["ORA-00921: unexpected end of SQL command", "ORA-01756", "ORA-", "Oracle ODBC", "Oracle Error", "Oracle Driver", "Oracle DB2", "error ORA-", "SQL command not properly ended"]
     E_DB2=["DB2 ODBC", "DB2 error", "DB2 Driver"]
@@ -202,7 +185,6 @@ def PhantomLab(D13):
     return [ x for x in D13 if not (x in CVZ or seen_add(x))]
 #--------------------------------------------------------------
 def Get_Search_Page():
-    global Animation, fastprint
     print('')
     print(BitColors.azul+'[*] Numero De Dorks: '+str(len(List.dorks_list)))
     for i in range(len(List.dorks_list)):
@@ -241,6 +223,7 @@ def Get_Search_Page():
     print('')
     Animation('Completo..')
     Animation('Iniciando Scanner Sqli...')
+    print('')
     print('')
 
 file = open('url.txt' , 'r')
@@ -525,4 +508,3 @@ def main():
 
 if __name__ == '__main__':
     main()       
-
