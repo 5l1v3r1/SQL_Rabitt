@@ -150,11 +150,11 @@ class SQL_Vulns():
     SqlVulns_List = ["mysql_num_rows()","mysql_fetch_array()","Error Occurred While Processing Request","Server Error in '/' Application","Microsoft OLE DB Provider for ODBC Drivers error","error in your SQL syntax","Invalid Querystring",
     "OLE DB Provider for ODBC","VBScript Runtime","ADODB.Field","BOF or EOF","ADODB.Command","JET Database","mysql_fetch_row()",
     "Syntax error","include()","mysql_fetch_assoc()","mysql_fetch_object()","mysql_numrows()","GetArray()","FetchRow()",
-    "Input string was not in a correct format","","","","","","",
+    "Input string was not in a correct format","session_start()","array_merge()","preg_match()","ilesize()","filesize()","",
     "SQL Error","[MySQL][ODBC 5.1 Driver][mysqld-4.1.22-community-nt-log]You have an error in your SQL syntax","You have an error in your SQL syntax","mysql_query()","mysql_fetch_object()","Query failed:","Warning include() [function.include]",
     "mysql_num_rows()","Database Query Failed","mysql_fetch_assoc()","mysql_free_result()","Query failed (SELECT * FROM WHERE id = )","num_rows","Error Executing Database Query",
     "Unclosed quotation mark","Error Occured While Processing Request","FetchRows()","Microsoft JET Database","ODBC Microsoft Access Driver","OLE DB Provider for SQL Server","SQLServer JDBC Driver",
-    "Error Executing Database Query","ORA-01756"]
+    "Error Executing Database Query","ORA-01756","getimagesize()",]
     E_MICROSOFT=["Microsoft JET Database", "ADODB.Recordset", "500 - Internal server error", "Microsoft OLE DB Provider", "Unclosed quotes", "ADODB.Command", "ADODB.Field error", "Microsoft VBScript","Microsoft OLE DB Provider for SQL Server", "Unclosed quotation mark", "Microsoft OLE DB Provider for Oracle", "Active Server Pages error", "OLE/DB provider returned message","OLE DB Provider for ODBC", "Unclosed quotation mark after the character string", "SQL Server", "Warning: odbc_"]
     E_ORACLE=["ORA-00921: unexpected end of SQL command", "ORA-01756", "ORA-", "Oracle ODBC", "Oracle Error", "Oracle Driver", "Oracle DB2", "error ORA-", "SQL command not properly ended"]
     E_DB2=["DB2 ODBC", "DB2 error", "DB2 Driver"]
