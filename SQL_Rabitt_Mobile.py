@@ -100,12 +100,6 @@ class BitColors():
     reverso = '\033[2m'    
     default  = '\033[0m'
 
-class List():
-#Dorks
-    dorks = open('dorks.txt' , 'r', encoding='utf8')
-    dorks_list = dorks.readlines()
-    dorks.close()    
-
 file = open('urls_Duplicadas.txt', 'w')
 file.close()
 
@@ -175,20 +169,24 @@ class SQL_Vulns():
 
     All_Vulns = [SqlVulns_List,E_MICROSOFT,E_ORACLE,E_DB2,E_ODBC,E_POSTGRESQL,E_SYBASE,E_JBOSSWEB,E_JDBC,E_JAVA,E_PHP,E_ASP,E_LUA,E_UNDEFINED,E_MARIADB]
 
-#def Sql_Injection(target):
-    #os.system("xfce4-terminal -e 'sqlmap -u {} --dbs'".format(target))
-    #time.sleep(2)
-
-def PhantomLab(D13):
-    CVZ = set()
-    seen_add = CVZ.add
-    return [ x for x in D13 if not (x in CVZ or seen_add(x))]
-#--------------------------------------------------------------
-def Get_Search_Page():
+def main():
+    global Animation, fastprint, paginas
     print('')
-    print(BitColors.azul+'[*] Numero De Dorks: '+str(len(List.dorks_list)))
-    for i in range(len(List.dorks_list)):
-        search = List.dorks_list[i].strip()
+    
+    file = open('urls_Duplicadas.txt', 'w')
+    file.close()
+    dorks = open('dorks.txt' , 'r', encoding='utf8')
+    dorks_list = dorks.readlines()
+    dorks.close() 
+    
+    def PhantomLab(D13):
+        CVZ = set()
+        seen_add = CVZ.add
+        return [ x for x in D13 if not (x in CVZ or seen_add(x))]
+
+    print(BitColors.azul+'[*] Numero De Dorks: '+str(len(dorks_list)))
+    for i in range(len(dorks_list)):
+        search = dorks_list[i].strip()
         count = 1
         while (count < paginas):
             req = ('http://www.bing.com/search?q=' + search + '&first='+str(count))
@@ -224,28 +222,23 @@ def Get_Search_Page():
     Animation('Completo..')
     Animation('Iniciando Scanner Sqli...')
     print('')
-    print('')
 
-file = open('url.txt' , 'r')
-url_list = file.readlines()
-file.close()
+    file = open('url.txt' , 'r')
+    url_list = file.readlines()
+    file.close()
 
-os.system('clear')
-def Search():
-    global err_page, good_page
+    err_page = 0
+    good_page = 0
+
+    os.system('clear')
     try:
         for i in range(len(url_list)):
             page = url_list[i].strip()
             try:
-                try:
-                    response = requests.get(page)
-                except:
-                    err_page = err_page+1
-                    print(BitColors.vermelho+'Error get page found...')
-            except KeyboardInterrupt:
-                print('')
-                print(BitColors.vermelho+'[!] Exiting.....')        
-                sys.exit(1)
+                response = requests.get(page)
+            except:
+                err_page = err_page+1
+                print(BitColors.vermelho+'Error get page found...')
                 #--------------------------
             for i in range(len(SQL_Vulns.All_Vulns)):
                 if i == 0:
@@ -487,24 +480,11 @@ def Search():
         print('')
         print(BitColors.ciano+'[404] - Pages not Found: '+BitColors.vermelho+str(err_page))
         print('')
-        input(BitColors.magenta+'Complete. Press any key...')
-        print('')
     except KeyboardInterrupt:
         print(BitColors.vermelho+"\n [!] Exiting.....")
         exit()
 
-def main():
-    try:
-        try:
-            Get_Search_Page()
-            Search()
-        except Exception as e:
-            print (BitColors.vermelho+'Error Found: {}'.format(e))
-    except KeyboardInterrupt:
-        print('')
-        print(BitColors.vermelho+'[!] Exiting....')
-        print('')
-        exit() 
-
 if __name__ == '__main__':
-    main()       
+    main()      
+
+
