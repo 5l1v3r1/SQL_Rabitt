@@ -1,1 +1,6 @@
-
+inurl:.php?id= & site:gov.br & intext:"SQL syntax"
+inurl:.php?id= & site:gov.br & intext:"Microsoft OLE DB Provider"
+inurl:.php?id= & site:gov.br & intext:"mysql_fetch_assoc()"
+inurl:.php?id= & site:gov.br & intext:"error in your SQL syntax" 
+inurl:.php?id= & site:gov.br & intext:"mysql_num_rows()"
+inurl:.php?id= & site:gov.br & intext:"mysql_fetch_array()"
