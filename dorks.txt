@@ -1,3 +1,16 @@
+site:.anatel.gov.br ext:asp
+site:.anatel.gov.br ext:php
+site:.globo.com ext:php mysql_
+site:.gov.br .php?id= syntax; -pdf -policiacivil
+site:.gov.br SQL "syntax;"
+site:.ap.gov.br "SQL syntax;" ext:php
+site:.gov.br "Microsoft OLE DB Provider"
+site:.esporte.gov.br ext:asp
+site:.esporte.gov.br (id|new|ver)
+site:.esporte.gov.br (id|new|ver)
+site:.psdb.org.br ext:asp id
+inurl:.policiacivil.sp.gov.br modules
+site:sp.gov.br "Warning:" ext:php
 inurl:.php?id= & site:gov.br & intext:"SQL syntax"
 inurl:.php?id= & site:gov.br & intext:"Microsoft OLE DB Provider"
 inurl:.php?id= & site:gov.br & intext:"mysql_fetch_assoc()"
